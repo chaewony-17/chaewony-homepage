@@ -35,7 +35,7 @@ jobs:
         # https://<username>.github.io/chaewony-portfolio/
         run: npm run build
         env:
-          BASE_PATH: /chaewony-portfolio/
+          BASE_PATH: /chaewony-homepage/
 
       - name: Add SPA fallback (for client-side routing)
         run: cp dist/index.html dist/404.html
