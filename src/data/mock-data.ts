@@ -85,9 +85,9 @@ export const PROJECTS = [
       methodology: "The framework first uses a VLM-based reasoning module to interpret visual evidence related to worker lifeline connection, while explicitly estimating perceptual uncertainty. Human annotation data are used to characterize viewpoint-dependent ambiguity and to assess whether the model's uncertainty behavior is aligned with human perception. When the observation remains inconclusive, an uncertainty-aware NBV planner selects a new viewpoint by considering semantic relevance, expected information gain, and motion cost, allowing the robot to iteratively reduce uncertainty through active repositioning.",
       results: "The proposed method improved both reasoning reliability and navigation performance. The VLM-based reasoning module substantially outperformed the prompt-only baseline and showed appropriate abstention behavior under ambiguous conditions. In addition, the uncertainty-driven NBV strategy achieved higher success in resolving uncertain observations than the RL-based comparison method. These findings support the effectiveness of combining self-aware reasoning with active viewpoint selection for more reliable construction safety monitoring.",
       venue: "M.S. Thesis — Seoul National University",
- relatedWork: "Yang, C., Yoon, S., Park, M., & Ahn, C. R. (2026). \"Closed-Loop Perception–Action Framework for VLM-Based Relational Safety Monitoring in Construction.\" Submitted to Automation in Construction. Under review.",
+      relatedWork: "Yang, C., Yoon, S., Park, M., & Ahn, C. R. (2026). \"Closed-Loop Perception–Action Framework for VLM-Based Relational Safety Monitoring in Construction.\" Submitted to Automation in Construction. Under review.",
       tools: ["Python", "PyTorch", "Unity", "Vision-Language Models (VLMs)", "Segment Anything Model (SAM)", "CLIP", "Next-Best-View"],
-      inProgress: true
+      thesisUrl: "https://m.riss.kr/link?id=T17449971"
     }
   },
   {
