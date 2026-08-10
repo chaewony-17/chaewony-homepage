@@ -7,13 +7,13 @@ export const PERSONAL_INFO = {
   institution: "Seoul National University",
   bio: "I received my Master's degree in Architectural Engineering from Seoul National University, where I was advised by Prof. Changbum R. Ahn. My research interests are in robotic navigation and machine learning to enhance safety and efficiency in the field of construction.",
   featuredNews: {
-    text: 'In May 2025, I made my first academic presentation at i3CE 2025 with the paper "Active Robot Vision with Perception-Aware Navigation for Worker Monitoring".',
+    text: 'I presented my paper "Understanding the \'Unknown\': A Vision-Language Framework for Context-aware Safety Monitoring in Mobile Robots" at the 2026 ASCE International Conference on Computing in Civil Engineering (i3CE 2026).',
     link: "#publications"
   },
   email: "chaewony@snu.ac.kr",
   phone: "+82-10-7578-1943",
   location: "39-425, Seoul National University\n1 Gwanak-ro, Gwanak-gu, Seoul, Korea 08826",
-  cvLink: "https://docs.google.com/document/d/1W_OZzRfeHJns1BMMXdq74GmU2znqBCtC/edit",
+  cvLink: "https://docs.google.com/document/d/1n2v4d6zFpIU0kUxaI5s0IPFdfONyJQLi/edit?usp=sharing&ouid=115830083569493838880&rtpof=true&sd=true",
   socials: {
     scholar: "https://scholar.google.co.kr/citations?hl=ko&user=Cds-RDQAAAAJ",
     github: "https://github.com/chaewony-17",
@@ -31,6 +31,16 @@ export const RESEARCH_INTERESTS = [
 export const PUBLICATIONS = [
   {
     id: 1,
+    title: 'Understanding the "Unknown": A Vision-Language Framework for Context-aware Safety Monitoring in Mobile Robots',
+    authors: "Yang, C., Park, M., Ahn, C. R.",
+    venue: "Proceedings of the 2026 ASCE International Conference on Computing in Civil Engineering (i3CE 2026)",
+    year: "2026",
+    abstract: "This paper presents a vision-language framework that enables a mobile robot to recognize and reason about unknown or ambiguous observations for more context-aware safety monitoring in construction environments.",
+    image: "/images/pub-2.png",
+    links: { pdf: "papers/understanding-unknown.pdf" }
+  },
+  {
+    id: 2,
     title: "Active Robot Vision with Perception-Aware Navigation for Worker Monitoring",
     authors: "Yang C., Park J., Park, M., Ahn, C. R.",
     venue: "Proceedings of the 2025 ASCE International Conference on Computing in Civil Engineering (i3CE 2025)",
@@ -40,7 +50,7 @@ export const PUBLICATIONS = [
     links: { pdf: "papers/active-robot-vision.pdf", scholar: "https://scholar.google.co.kr/scholar?oi=bibs&cluster=17987844590995390699&btnI=1&hl=ko" }
   },
   {
-    id: 2,
+    id: 3,
     title: "Reinforcement Learning-Based Navigation for Monitoring Personal Protective Equipment in Occluded Environments",
     authors: "Yang, C., Park, J., Park, M., Ahn, C. R.",
     venue: "The 2025 Spring Annual Conference of Architectural Institute of Korea (AIK) — Excellent Paper Award",
@@ -50,7 +60,7 @@ export const PUBLICATIONS = [
     links: { pdf: "papers/rl-navigation-ppe.pdf", url: "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE12169703" }
   },
   {
-    id: 3,
+    id: 4,
     title: "Analysis of On-Site Utilization of the Hazard and Risk Prevention Plan System in the Construction Industry",
     authors: "Ji, J., Won, J., Shin, S., Yoo, B., Yang, C., Lee, C., Park, M., Ahn, C. R.",
     venue: "Journal of Korea Institute of Construction Safety, Vol.7(2), pp.25-30",
@@ -74,7 +84,7 @@ export const PROJECTS = [
       motivation: "Construction-site monitoring is frequently hindered by occlusion, limited viewpoints, and reduced visual clarity at longer distances. Although prior studies have improved visibility through active sensing, they have not sufficiently addressed whether the visual evidence is reliable enough for safety-critical interpretation. This limitation is especially important in tasks such as lifeline inspection, where ambiguous observations should lead to cautious reasoning rather than overconfident classification.",
       methodology: "The framework first uses a VLM-based reasoning module to interpret visual evidence related to worker lifeline connection, while explicitly estimating perceptual uncertainty. Human annotation data are used to characterize viewpoint-dependent ambiguity and to assess whether the model's uncertainty behavior is aligned with human perception. When the observation remains inconclusive, an uncertainty-aware NBV planner selects a new viewpoint by considering semantic relevance, expected information gain, and motion cost, allowing the robot to iteratively reduce uncertainty through active repositioning.",
       results: "The proposed method improved both reasoning reliability and navigation performance. The VLM-based reasoning module substantially outperformed the prompt-only baseline and showed appropriate abstention behavior under ambiguous conditions. In addition, the uncertainty-driven NBV strategy achieved higher success in resolving uncertain observations than the RL-based comparison method. These findings support the effectiveness of combining self-aware reasoning with active viewpoint selection for more reliable construction safety monitoring.",
-      venue: "M.S. Thesis — Seoul National University (in preparation)",
+      venue: "M.S. Thesis — Seoul National University (in preparation) · Yang, C., Yoon, S., Park, M., & Ahn, C. R. (2026). \"Closed-Loop Perception–Action Framework for VLM-Based Relational Safety Monitoring in Construction.\" Submitted to Automation in Construction. Under review.",
       tools: ["Python", "PyTorch", "Unity", "Vision-Language Models (VLMs)", "Segment Anything Model (SAM)", "CLIP", "Next-Best-View"],
       inProgress: true
     }
@@ -103,10 +113,12 @@ export const PROJECTS = [
 ];
 
 export const NEWS = [
-  { id: 0, date: "Feb 2026", content: '🎓 Graduated with M.S. in Architectural Engineering from Seoul National University (GPA 4.18/4.3). Thesis: "Context-aware Robot Navigation for Resolving Perceptual Uncertainty in Construction Environments".' },
-  { id: 1, date: "May 2025", content: '🎤 Made my first academic presentation at i3CE 2025 (ASCE International Conference on Computing in Civil Engineering) in New Orleans, Louisiana with the paper "Active Robot Vision with Perception-Aware Navigation for Worker Monitoring".' },
-  { id: 2, date: "Apr 2025", content: '🏆 Received the Excellent Paper Award at the 2025 Spring Annual Conference of the Architectural Institute of Korea (AIK) for "Reinforcement Learning-Based Navigation for Monitoring Personal Protective Equipment in Occluded Environments".' },
-  { id: 3, date: "Mar 2024", content: "📚 Started the M.S. program in Architectural Engineering at Seoul National University under the supervision of Prof. Changbum R. Ahn." },
-  { id: 4, date: "Feb 2024", content: "🎓 Graduated Summa Cum Laude (GPA 4.33/4.50) with a B.S. in Architecture and Building Science from Chung-Ang University." },
-  { id: 5, date: "2023", content: '🥇 Received the Grand Award in the "Chung-Ang Architecture Exhibition 2023" for the project: BIM-enabled Detection of Dynamic Blind Spots for Construction Worker Safety.' },
+  { id: 0, date: "Jun 2026", content: '📄 My paper "Understanding the \'Unknown\': A Vision-Language Framework for Context-aware Safety Monitoring in Mobile Robots" was accepted (in press) at the 2026 ASCE International Conference on Computing in Civil Engineering.' },
+  { id: 1, date: "Apr 2026", content: '🏆 Received the Excellent Thesis Award at the 22nd AIK Excellent Graduate Thesis Exhibition, Architectural Institute of Korea (AIK), for my thesis "Context-aware Robot Navigation for Resolving Perceptual Uncertainty in Construction Environments".' },
+  { id: 2, date: "Feb 2026", content: '🎓 Graduated with M.S. in Architectural Engineering from Seoul National University (GPA 4.18/4.3). Thesis: "Context-aware Robot Navigation for Resolving Perceptual Uncertainty in Construction Environments".' },
+  { id: 3, date: "May 2025", content: '🎤 Made my first academic presentation at i3CE 2025 (ASCE International Conference on Computing in Civil Engineering) in New Orleans, Louisiana with the paper "Active Robot Vision with Perception-Aware Navigation for Worker Monitoring".' },
+  { id: 4, date: "Apr 2025", content: '🏆 Received the Excellent Paper Award at the 2025 Spring Annual Conference of the Architectural Institute of Korea (AIK) for "Reinforcement Learning-Based Navigation for Monitoring Personal Protective Equipment in Occluded Environments".' },
+  { id: 5, date: "Mar 2024", content: "📚 Started the M.S. program in Architectural Engineering at Seoul National University under the supervision of Prof. Changbum R. Ahn." },
+  { id: 6, date: "Feb 2024", content: "🎓 Graduated Summa Cum Laude (GPA 4.33/4.50) with a B.S. in Architecture and Building Science from Chung-Ang University." },
+  { id: 7, date: "2023", content: '🥇 Received the Grand Award in the "Chung-Ang Architecture Exhibition 2023" for the project: BIM-enabled Detection of Dynamic Blind Spots for Construction Worker Safety.' },
 ];
