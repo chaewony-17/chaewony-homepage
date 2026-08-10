@@ -48,9 +48,6 @@ export default function ProjectDetail() {
             {project.title}
           </h1>
           <p className="text-base text-primary font-medium italic">{details.venue}</p>
-	{details.relatedWork && (
-  	<p className="text-base text-primary font-medium italic mt-1">{details.relatedWork}</p>
-)}
         </div>
       </div>
 
@@ -126,7 +123,7 @@ export default function ProjectDetail() {
         )}
 
         {/* PDF Links */}
-        {!details.inProgress && (details.pdf || (details.pdfs && details.pdfs.length > 0)) && (
+        {!details.inProgress && (details.pdf || details.thesisUrl || (details.pdfs && details.pdfs.length > 0)) && (
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -134,6 +131,17 @@ export default function ProjectDetail() {
             transition={{ duration: 0.5, delay: 0.6 }}
             className="pt-4 border-t border-border flex flex-wrap gap-4"
           >
+            {details.thesisUrl && (
+              <a
+                href={details.thesisUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-primary-foreground font-semibold hover:bg-primary/90 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200"
+              >
+                <FileText size={18} />
+                View Thesis
+              </a>
+            )}
             {details.pdf && (
               <a
                 href={`${import.meta.env.BASE_URL}${details.pdf}`}
