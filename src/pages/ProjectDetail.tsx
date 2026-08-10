@@ -48,6 +48,9 @@ export default function ProjectDetail() {
             {project.title}
           </h1>
           <p className="text-base text-primary font-medium italic">{details.venue}</p>
+	{details.relatedWork && (
+  	<p className="text-base text-primary font-medium italic mt-1">{details.relatedWork}</p>
+)}
         </div>
       </div>
 
